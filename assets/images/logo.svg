@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background -->
+  <circle cx="200" cy="200" r="180" fill="#f2f7fd" />
+  
+  <!-- DNA Helix Structure -->
+  <path d="M140,100 Q200,150 140,200 Q200,250 140,300" stroke="#5865F2" stroke-width="8" fill="none" />
+  <path d="M260,100 Q200,150 260,200 Q200,250 260,300" stroke="#24D1E8" stroke-width="8" fill="none" />
+  
+  <!-- Connecting bars between DNA strands -->
+  <line x1="145" y1="120" x2="255" y2="120" stroke="#7289DA" stroke-width="4" />
+  <line x1="145" y1="160" x2="255" y2="160" stroke="#7289DA" stroke-width="4" />
+  <line x1="145" y1="200" x2="255" y2="200" stroke="#7289DA" stroke-width="4" />
+  <line x1="145" y1="240" x2="255" y2="240" stroke="#7289DA" stroke-width="4" />
+  <line x1="145" y1="280" x2="255" y2="280" stroke="#7289DA" stroke-width="4" />
+  
+  <!-- Stylized F in the center representing Fitness -->
+  <path d="M185,160 L215,160 L215,180 L200,180 L200,200 L210,200 L210,220 L200,220 L200,260 L185,260 Z" fill="#5865F2" />
+  
+  <!-- Solana-inspired accent -->
+  <circle cx="230" cy="240" r="15" fill="#14F195" />
+  
+  <!-- Text -->
+  <text x="200" y="340" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#2E3440">FitGenesis</text>
+</svg> 

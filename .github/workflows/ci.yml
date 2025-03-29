@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: fitgenesis_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Setup Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+
+    - name: Install Dependencies
+      run: |
+        cd apps/frontend && npm install
+        cd ../backend && npm install
+        cd ../../contracts && cargo build
+
+    - name: Run Frontend Tests
+      run: |
+        cd apps/frontend
+        npm run test
+
+    - name: Run Backend Tests
+      run: |
+        cd apps/backend
+        npm run test
+
+    - name: Run Contract Tests
+      run: |
+        cd contracts
+        cargo test
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install Dependencies
+      run: |
+        cd apps/frontend && npm install
+        cd ../backend && npm install
+
+    - name: Lint Frontend
+      run: |
+        cd apps/frontend
+        npm run lint
+
+    - name: Lint Backend
+      run: |
+        cd apps/backend
+        npm run lint
+
+    - name: Lint Contracts
+      uses: actions-rs/cargo@v1
+      with:
+        command: clippy
+        args: --manifest-path contracts/Cargo.toml -- -D warnings 
