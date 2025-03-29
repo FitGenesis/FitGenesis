@@ -1,120 +1,117 @@
-# FitGenesis: Personalized Genetic Fitness Ecosystem
+# FitGenesis
 
 <div align="center">
-  <img src="assets/images/logo.png" alt="FitGenesis Logo" width="200"/>
+  <img src="assets/logo.svg" alt="FitGenesis Logo" width="200" height="200" />
 </div>
 
-[![Website](https://img.shields.io/badge/Website-fitgenesis.xyz-blue)](http://fitgenesis.xyz/)
-[![Twitter Follow](https://img.shields.io/twitter/follow/FitGenesis?style=social)](https://x.com/FitGenesis)
-[![GitHub Stars](https://img.shields.io/github/stars/FitGenesis/FitGenesis?style=social)](https://github.com/FitGenesis/FitGenesis)
+FitGenesis is a revolutionary fitness platform that combines genetic analysis, biometric data, and blockchain technology to provide personalized fitness solutions. The platform uses AI to analyze genetic markers and real-time biometric data to create tailored workout and nutrition plans, while leveraging blockchain technology for secure data management and reward distribution.
 
-## Overview
+<div align="center">
+  
+  🌐 [Official Website](http://fitgenesis.xyz/) | 🐦 [Twitter](https://x.com/FitGenesis)
+  
+</div>
 
-FitGenesis is a revolutionary fitness ecosystem that combines personal genetic data, real-time biometric monitoring, and smart home devices, powered by Solana blockchain technology. The platform delivers a truly personalized fitness experience through advanced AI algorithms and blockchain-based incentive mechanisms.
+## 🌟 Features
 
-## Key Features
+- **Genetic Analysis**: Advanced DNA analysis for personalized fitness recommendations
+- **Real-time Biometric Tracking**: Integration with wearable devices for continuous health monitoring
+- **AI-Powered Recommendations**: Machine learning algorithms for workout and nutrition optimization
+- **Blockchain Rewards**: FIT token-based incentive system for achieving fitness goals
+- **Social Integration**: Community features for motivation and support
+- **Enterprise Solutions**: Comprehensive tools for fitness centers and trainers
 
-- 🧬 Gene-based Personalized Fitness Plans
-- 📊 Real-time Biometric Tracking
-- 🤖 AI-powered Training Adjustments
-- 💰 Blockchain Incentive System
-- 🔒 Data Sovereignty and Privacy Protection
-
-## Technical Architecture
-
-### System Components
-
-```mermaid
-graph TD
-    A[Gene Analysis Platform] --> D[AI Training System]
-    B[Smart Fitness Hardware] --> D
-    C[Biometric Sensors] --> D
-    D --> E[Solana Blockchain]
-    D --> F[User Interface]
-    E --> G[FIT Token Economy]
-```
-
-### Technology Stack
-
-- **Frontend**: React, TypeScript, TailwindCSS
-- **Backend**: Node.js, Express, PostgreSQL
-- **Blockchain**: Solana, Rust
-- **AI/ML**: TensorFlow, PyTorch
-- **DevOps**: Docker, GitHub Actions
-
-## Project Structure
-
-```
-FitGenesis/
-├── apps/
-│   ├── frontend/          # React web application
-│   └── backend/           # Node.js REST API
-├── contracts/             # Solana smart contracts
-├── docs/                  # Documentation
-├── scripts/              # Utility scripts
-├── assets/               # Project assets
-└── shared/               # Shared utilities
-```
-
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 16+
-- Rust 1.65+
-- Solana CLI 1.16+
-- Docker & Docker Compose
+- Node.js (v18 or higher)
+- Rust (latest stable)
+- Solana CLI
+- PostgreSQL (v14 or higher)
+- Yarn or npm
 
 ### Installation
 
 1. Clone the repository:
-```bash
-git clone https://github.com/FitGenesis/FitGenesis.git
-cd FitGenesis
-```
+   ```bash
+   git clone https://github.com/FitGenesis/FitGenesis.git
+   cd FitGenesis
+   ```
 
-2. Install dependencies:
-```bash
-# Install frontend dependencies
-cd apps/frontend
-npm install
+2. Install frontend dependencies:
+   ```bash
+   cd apps/frontend
+   yarn install
+   ```
 
-# Install backend dependencies
-cd ../backend
-npm install
+3. Install backend dependencies:
+   ```bash
+   cd ../backend
+   yarn install
+   ```
 
-# Install contract dependencies
-cd ../../contracts
-cargo build
-```
+4. Set up environment variables:
+   ```bash
+   cp .env.example .env
+   ```
 
-3. Set up environment variables:
-```bash
-cp .env.example .env
-```
+5. Build smart contracts:
+   ```bash
+   cd ../../contracts
+   cargo build
+   ```
 
-4. Start the development environment:
-```bash
-docker-compose up
-```
+### Development
 
-## Documentation
+1. Start the frontend development server:
+   ```bash
+   cd apps/frontend
+   yarn dev
+   ```
 
-- [Technical Documentation](docs/technical/)
-- [API Reference](docs/api/)
-- [Smart Contract Documentation](docs/contracts/)
-- [Development Guide](docs/development/)
+2. Start the backend server:
+   ```bash
+   cd ../backend
+   yarn dev
+   ```
 
-## Contributing
+3. Run smart contract tests:
+   ```bash
+   cd ../../contracts
+   cargo test
+   ```
 
-Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting a Pull Request.
+## 📚 Documentation
 
-## License
+- [API Documentation](./docs/api/README.md)
+- [Smart Contract Documentation](./docs/contracts/README.md)
+- [Frontend Documentation](./docs/frontend/README.md)
+- [Backend Documentation](./docs/backend/README.md)
+
+## 🛠 Architecture
+
+FitGenesis follows a modern microservices architecture:
+
+- **Frontend**: React.js with TypeScript
+- **Backend**: Node.js with Express and TypeScript
+- **Smart Contracts**: Rust on Solana
+- **Database**: PostgreSQL
+- **AI/ML**: TensorFlow/PyTorch models
+- **Infrastructure**: AWS/GCP
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## 📋 Project Status
+
+See our [Enhancement Plan](ENHANCEMENT_PLAN.md) for detailed development phases and timelines.
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact
+## 🏆 Team
 
-- Website: [http://fitgenesis.xyz/](http://fitgenesis.xyz/)
-- Twitter: [@FitGenesis](https://x.com/FitGenesis)
-- GitHub: [FitGenesis/FitGenesis](https://github.com/FitGenesis/FitGenesis) 
+FitGenesis is developed by a team of fitness enthusiasts, blockchain developers, and AI specialists committed to revolutionizing the fitness industry through technology. 
