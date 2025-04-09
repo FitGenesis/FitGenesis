@@ -8,10 +8,6 @@
   🌐 [Official Website](http://fitgenesis.xyz/) | 🐦 [Twitter](https://x.com/FitGenesis)
 </div>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Website](https://img.shields.io/badge/Website-fitgenesis.xyz-blue)](http://fitgenesis.xyz/)
-[![Twitter](https://img.shields.io/badge/Twitter-@FitGenesis-blue)](https://x.com/FitGenesis)
-
 FitGenesis is a revolutionary fitness platform that combines genetic analysis, biometric data, and blockchain technology to provide personalized fitness solutions. The platform uses AI to analyze genetic markers and real-time biometric data to create tailored workout and nutrition plans, while leveraging blockchain technology for secure data management and reward distribution.
 
 ## Overview
